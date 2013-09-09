@@ -1,0 +1,50 @@
+﻿ASSIGNMENT 1:
+
+Difference between Protocols and Subclasses:
+
+PROTOCOLS:
+	
+	When using OOP, it’s important to be able to define a set of behavior that is expected of an object in a given situation. As an example, a view expects to be able to communicate with a data source object in order to find out what it is required to display. 
+	This means that the data source must respond to a specific set of messages that the view might send to it.
+
+	In order for the view to know whether an object is a suitable data source, it must be able to ensure that the object implements the necessary methods.
+
+	Protocols declare the methods expected to be used for a particular situation. When a class conforms to a protocol it ensures that 
+	it implements the necessary methods.
+
+SUBCLASS:
+	
+	Classes and the objects they mirror often require a common set of charecteristics among a group of classes working together. This can be achieved through inheritance. A class that inherits properties from another class is called a subclass.
+	NSObject is the "Super class" from which all classes inherit.
+
+PROTOCOL VS. SUBCLASS:
+
+	If a class conforms to a protocol it MUST define the necessary methods. In a subclass this is entirely optional. So while the protocol adopts a more stringent MUST/SHOULD conformist approach, a subclass provides more flexibility.
+
+	ANALOGY + CODE:
+
+		#import <Foundation/Foundation.h> 
+		@protocol motorvehicle <NSObject> 
+		-(void) getEngineNumber; 
+		-(void) setTopSpeed; 
+		@end
+
+	Consider the protocol called motorvehicle. Any interface that conforms to this MUST support methods to fetch the engine number and add a top speed. 
+	
+		@interface MyVehicle <motorvehicle> 
+
+		-(void) getEngineNumber { //Code } 
+		-(void) setTopSpeed { //Code  } 
+
+	MyVehicle conforms to motorvehicle and so it provides definitons for those two methods.
+
+		#import <Foundation/Foundation.h> 
+		@interface MyHarley:MyVehicle 
+		-(void) getEngineCC;
+		@end 
+
+	MyHarley is a subclass that inherits from MyVehicle. It does not need to define getEngineNumber and setTopSpeed.
+
+
+
+
