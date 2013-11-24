@@ -1,0 +1,103 @@
+1. Explore the DVM instructions and prepare a summary of the same atleast for 5 instructions in a detailed format
+
+i) instruction name:
+ii) syntax
+iii)example
+
+->1.Dalvik is the process virtual machine (VM) in Google's Android operating system. It is the software that runs the apps on Android devices.
+ Dalvik is thus an integral part of Android, which is typically used on mobile devices such as mobile phones and tablet computers as well as 
+ more recently on embedded devices such as smart TVs and media streamers. Programs are commonly written in Java and compiled to bytecode.
+ They are then converted from Java Virtual Machine-compatible .class files to Dalvik-compatible .dex (Dalvik Executable) files before installation on a device.
+ The compact Dalvik Executable format is designed to be suitable for systems that are constrained in terms of memory and processor speed.
+ 2.Dalvik has some specific characteristics that differentiate it from other standard VMs:
+    The VM was slimmed down to use less space
+    The constant pool has been modified to use only 32-bit indices to simplify the interpreter
+    Standard Java byte code executes 8-bit stack instructions. Local variables must be copied to or from the operand stack by separate instructions.
+	Dalvik instead uses its own 16-bit instruction set that works directly on local variables. The local variable is commonly picked by a 4-bit 'virtual register' field. This lowers Dalvik's instruction count and raises its interpreter speed.
+     Moreover, according to Google, the design of Dalvik permits a device to run multiple instances of the VM efficiently.
+	 
+	 
+	 1>i) instruction name:00 10x
+       ii) syntax:nop
+       iii)example:0000 - nop 
+	   
+	 2>i) instruction name:01 12x
+       ii) syntax:move vA,vB
+	              A: destination register (4 bits)
+                  B: source register (4 bits)
+	   iii)example:0110 - move v0, v1
+                     Moves v1 into v0.
+					 
+	3>i) instruction name:02 22x
+      ii) syntax:move/from16 vAA, vBBBB
+	             A: destination register (8 bits)
+                 B: source register (16 bits)
+      iii)example:0200 1900 - move/from16 v0, v25
+          Moves v25 into v0.
+		  
+	4>i) instruction name:05 22x
+      ii) syntax: move-wide/from16 vAA, vBBBB
+	             A: destination register pair (8 bits)
+				B: source register pair (16 bits)
+      iii)example:0516 0000 - move-wide/from16 v22, v0
+				Moves v0 into v22. 
+				
+	5>i) instruction name:07 12x
+	 ii) syntax: move-object vA, vB
+				 A: destination register (4 bits)
+				 B: source register (4 bits)
+	iii)example:0781 - move-object v1, v8
+				Moves the object reference in v8 to v1.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------				  
+2. Differentiate between mobile and cloud computing
+->Mobile computing:1.Mobile computing is taking a physical device with you.
+				   This could be a laptop or a mobile phone or some device which enables you to 
+				   telework – working wherever you go because of the small size of the device you’re using.
+					2.Mobile computing is human–computer interaction by which a computer is expected to be transported during normal usage.
+					3.Mobile computing involves mobile communication, mobile hardware, and mobile software. 
+					Communication issues include ad hoc and infrastructure networks as well as communication properties, 
+					protocols, data formats and concrete technologies. Hardware includes mobile devices or device components.
+					Mobile software deals with the characteristics and requirements of mobile applications.
+					4.Portability is one aspect of mobile computing.
+					5.Devices:Personal digital assistant/enterprise digital assistant,Smartphone,Tablet computer and Ultra-Mobile PC.
+					6.Security issues involved in mobile computing:Different security counter-measures are being developed and applied to smartphones, 
+					from security in different layers of software to the dissemination of information to end users. T
+					here are good practices to be observed at all levels, from design to use, through the development of operating systems, 
+					software layers, and downloadable apps.
+  Cloud computing:1.Cloud computing, one of the new buzz words of 2008, allows you to store your files and folders in a “cloud” area on the Internet,
+					allowing you access to all of your files and folders wherever you are in the world – but you do need a physical device with Internet
+					access to access it. 
+			      2.Cloud computing is an expression used to describe a variety of computing concepts that involve a large number of computers connected 
+				  through a real-time communication network such as the Internet.[1] In science, cloud computing is a synonym for distributed computing 
+				  over a network, and means the ability to run a program or application on many connected computers at the same time.
+				  3.The phrase also more commonly refers to network-based services, which appear to be provided by real server hardware,
+				  and are in fact served up by virtual hardware, simulated by software running on one or more real machines. 
+				  Such virtual servers do not physically exist and can therefore be moved around and scaled up (or down) on the fly without 
+				  affecting the end user - arguably, rather like a cloud.
+				  4.At the foundation of cloud computing is the broader concept of converged infrastructure and shared services.
+				  5.Privacy:The increased use of cloud computing services such as Gmail and Google Docs has pressed the issue of privacy concerns
+				  of cloud computing services to the utmost importance. The provider of such services lie in a position such that with the greater 
+				  use of cloud computing services has given access to a plethora of data. This access has the immense risk of data being disclosed
+				  either accidentally or deliberately.Privacy advocates have criticized the cloud model for giving hosting companies' greater ease
+				  to control—and thus, to monitor at will—communication between host company and end user, and access user data (with or without permission).
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+3>Give an example of an application simulating an environment of  context aware computing and justify.
+->example application is GOOGLE LATITUDE
+	JUSTIFICATION
+			*Uses the following way to locate exact position on earth.
+				-global positioning system.
+				-tower signal iNFO
+				-IP address,if wifi connected.
+				-digital compass to show the direction.
+			*Context
+				-location
+				-project
+			*it also shows u r friends location on map,if they are using same application and sharing location
+			
+			*Application can be written in two ways: 1.location based alarm.
+													 2.near friend notifier.
+	
+				   
+				   
